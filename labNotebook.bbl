@@ -1,0 +1,64 @@
+\begin{thebibliography}{1}
+
+\bibitem{Serrano1999}
+B.~Arguello-Serrano and M.~Velez-Reyes.
+\newblock Nonlinear control of a heating, ventilating, and air conditioning
+  system with thermal load estimation.
+\newblock {\em IEEE Transactions on Control Systems Technology}, 7(1):56--63,
+  Jan 1999.
+
+\bibitem{Ferreira2012}
+P.M. Ferreira, A.E. Ruano, S.~Silva, and E.Z.E. Conceição.
+\newblock Neural networks based predictive control for thermal comfort and
+  energy savings in public buildings.
+\newblock {\em Energy and Buildings}, 55:238--251, 2012.
+
+\bibitem{FrancoisLavet2014}
+V.~Francois-Lavet, R.~Fonteneau, and D.~Ernst.
+\newblock Using approximate dynamic programming for estimating the revenues of
+  a hydrogen-based high-capacity storage device.
+\newblock In {\em 2014 IEEE Symposium on Adaptive Dynamic Programming and
+  Reinforcement Learning (ADPRL)}, pages 1--8, Dec 2014.
+
+\bibitem{FrancoisLavet2017}
+Vincent François-Lavet.
+\newblock {\em Contributions to deep reinforcement learning and its
+  applications in smartgrids}.
+\newblock PhD thesis, University of Liege, Place du 20 Aout 7, 4000 Liege,
+  Belgium, September 2017.
+
+\bibitem{Khamphanchai2015}
+W.~Khamphanchai, M.~Pipattanasomporn, M.~Kuzlu, and S.~Rahman.
+\newblock An agent-based open source platform for building energy management.
+\newblock In {\em IEEE PES Innovative Smart Grid Technologies Asia (ISGT
+  ASIA)}, Bangkok, Thailand, November 2015.
+
+\bibitem{Khan2004}
+Kaisar~R. Khan, Qamrul Ahsan, and Moshiur~R Bhuiyan.
+\newblock Expected energy production cost of two area interconnected systems
+  with jointly owned units.
+\newblock {\em Electric Power System Research Journal}, 69:115--122, 2004.
+
+\bibitem{Mocanu2018}
+E.~Mocanu, D.~C. Mocanu, P.~H. Nguyen, A.~Liotta, M.~E. Webber, M.~Gibescu, and
+  J.~G. Slootweg.
+\newblock On-line building energy optimization using deep reinforcement
+  learning.
+\newblock {\em IEEE Transactions on Smart Grid}, 0(0):1--1, TBA 2018.
+
+\bibitem{Pipattanasomporn2015}
+M.~Pipattanasomporn, M.~Kuzlu, W.~Khamphanchai, A.~Saha, K.~Rathinavel, and
+  S.~Rahman.
+\newblock Bemoss: An agent platform to facilitate grid-interactive building
+  operation with iot devices.
+\newblock In {\em 2015 IEEE Innovative Smart Grid Technologies - Asia (ISGT
+  ASIA)}, pages 1--6, Nov 2015.
+
+\bibitem{Zhang2016}
+X.~Zhang, R.~Adhikari, M.~Pipattanasomporn, M.~Kuzlu, and S.~Rahman.
+\newblock Deploying iot devices to make buildings smart: Performance evaluation
+  and deployment experience.
+\newblock In {\em 2016 IEEE 3rd World Forum on Internet of Things (WF-IoT)},
+  pages 530--535, Dec 2016.
+
+\end{thebibliography}

@@ -1,0 +1,12 @@
+This is makeindex, version 2.15 [TeX Live 2016] (kpathsea + Thai support).
+Scanning input file labNotebook.idx....done (4 entries accepted, 0 rejected).
+Sorting entries....done (9 comparisons).
+Generating output file labNotebook.ind....
+## Warning (input = labNotebook.idx, line = 1; output = labNotebook.ind, line = 3):
+   -- Unmatched range opening operator (.
+
+## Warning (input = labNotebook.idx, line = 2; output = labNotebook.ind, line = 4):
+   -- Unmatched range opening operator (.
+done (10 lines written, 2 warnings).
+Output written in labNotebook.ind.
+Transcript written in labNotebook.ilg.
