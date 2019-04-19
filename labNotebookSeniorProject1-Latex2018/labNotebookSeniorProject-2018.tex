@@ -459,7 +459,7 @@ Items to purchase:
 Jordan has completed the model of the current hardware setup in simscape. 
 \begin{figure}
   \centering
-  \boxed{\includegraphics{labNotebookSeniorProject1-Latex2018/figs/img/motorModelWithHBridge.png}}
+  \boxed{\includegraphics{figs/img/motorModelWithHBridge.png}}
   \caption{Simulink Model of Motor with H Bridge Control}
   \label{fig:motorModelWithHBridge}
 \end{figure}
@@ -516,7 +516,7 @@ Starting on the high level structure that was agreed upon. Reece should attempt 
 today in lab, Reece successfully toggled pin 3 and 4 of the remote xbee high and low through the XCTU software and the controller xbee. Note that the address to send frames to can disappear when the controller node is disconnected from power.  
 \begin{figure}
   
-  \boxed{\includegraphics[width=0.5\textwidth]{labNotebookSeniorProject1-Latex2018/figs/img/XBee-Quick-Reference-Guide.pdf}}
+  \boxed{\includegraphics[width=0.5\textwidth]{figs/img/XBee-Quick-Reference-Guide.pdf}}
   \caption{Xbee Quick Reference Guide}
   \label{fig:XBee Quick Reference Guide}
 \end{figure}
@@ -668,7 +668,7 @@ Reece put a 3.3v regulator in the circuit to power the XBee. The circuit is now 
 
 \begin{figure}
   
-  \boxed{\includegraphics[width=0.5\textwidth]{labNotebookSeniorProject1-Latex2018/figs/img/Circuit10_29}}
+  \boxed{\includegraphics[width=0.5\textwidth]{figs/img/Circuit10_29}}
   \caption{Remote Motor circuit}
   \label{fig:Remote Motor Circuit}
 \end{figure}
@@ -737,7 +737,7 @@ I also researched how to send data from our remote xbee to the coordinator xbee.
 
 \begin{figure}
   
-  \boxed{\includegraphics[width=1\textwidth]{labNotebookSeniorProject1-Latex2018/figs/img/BemossDOE.png}.png}
+  \boxed{\includegraphics[width=1\textwidth]{figs/img/BemossDOE.png}.png}
   \caption{Bemoss DOE Architecture}
   \label{fig:XBee Quick Reference Guide}
 \end{figure}
@@ -1404,7 +1404,7 @@ sshpass -p "raspberry" ssh -o StrictHostKeyChecking=no pi@192.168.1.41 "python /
     
 \begin{figure}
   
-  \boxed{\includegraphics[width=1\textwidth]{labNotebookSeniorProject1-Latex2018/figs/img/BashSSH.png}}
+  \boxed{\includegraphics[width=1\textwidth]{figs/img/BashSSH.png}}
   \caption{Automatic SSH Bash code}
   \label{fig:BashSSH}
 \end{figure}
@@ -1445,7 +1445,7 @@ the next step is to pass the IP variable from our python iteration script to our
 END OF LAB DAY REPORT
 all processes have been created and implemented (with exception of the IP variable being passed to the last script in fig RPI Identify). Reference the figure RPI Identify to see the process of how we identify a RPi and connect to it. This figure contains the names of scripts used, order of which they were used, which script each script calls, files that are created in each step, and files that are referenced in each step. 
 \begin{figure}
-  \boxed{\includegraphics[width=1\textwidth]{labNotebookSeniorProject1-Latex2018/figs/img/RPiIdent&Connect.jpg}}
+  \boxed{\includegraphics[width=1\textwidth]{figs/img/RPiIdent&Connect.jpg}}
   \caption{Raspberry Pi Identify and Connect Process}
   \label{fig:RPiIdentify}
 \end{figure}
@@ -1696,10 +1696,18 @@ Bob took time to get the three python scripts to work. As of right now, the firs
 
 
 \labday{April 16}
-integration done-bob
-pwm drive-jordan 
-    -add PID control to the model 
-    -lqr model needs to be working 
+
+\begin{itemize}
+\item  Integration done-bob
+\item pwm drive-jordan 
+  \begin{itemize}
+  \item add PID control to the model 
+  \item lqr model needs to be working 
+  \end{itemize}
+\end{itemize}
+
+
+
     
 make what Reece has done for hardware and software easily relocatable (put it all in one spot) 
 Bob make appendix for what he has done
@@ -1710,6 +1718,8 @@ appendices
 \labday{Arpil 18, 2019}
 While in lab today, Bob was able to get the motor running through BEMOSS. the BEMOSS server is able to take a request from the user in the form of a URL and then the raspberry pi starts the motor. It is not a perfect version as right now there is not a button that will direct the user towards the page, so this needs to be changed soon. Adding a button to do so will involve some extra html studying. 
 As stated above, right now the request is handled from the user entering a web page. It results in an ugly looking web page and a laggy interface. These will both be changed soon with a bit more studying of the django based server.
+
+\todo[inline]{Great! Try to add the motor control button in BEMOSS so that it is prominent.} 
 
 % \begin{thebibliography}{9}
 
