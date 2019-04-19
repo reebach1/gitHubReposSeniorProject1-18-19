@@ -1,0 +1,21 @@
+Script started on Tue 26 Feb 2019 01:20:55 PM CST
+]0;bemoss@bemoss-Latitude-E6510: ~/testing/test_scripts[01;32mbemoss@bemoss-Latitude-E6510[00m:[01;34m~/testing/test_scripts[00m$ lsgedit BaseAPI_WeMo.pyc[Kls[Kgedit BaseAPI_WeMo.pyc[Kls[K[Ksudo nmap -sn 90[K[K192.168.1.0/2 4
+[sudo] password for bemoss: 
+
+Starting Nmap 7.01 ( https://nmap.org ) at 2019-02-26 13:21 CST
+Nmap scan report for 192.168.1.1
+Host is up (0.0030s latency).
+MAC Address: 00:0F:66:0A:91:E8 (Cisco-Linksys)
+Nmap scan report for 192.168.1.41
+Host is up (0.012s latency).
+MAC Address: B8:27:EB:BF:BA:DE (Raspberry Pi Foundation)
+Nmap scan report for 192.168.1.112
+Host is up (-0.069s latency).
+MAC Address: 14:91:82:B4:F0:BD (Belkin International)
+Nmap scan report for 192.168.1.134
+Host is up.
+Nmap done: 256 IP addresses (4 hosts up) scanned in 3.97 seconds
+]0;bemoss@bemoss-Latitude-E6510: ~/testing/test_scripts[01;32mbemoss@bemoss-Latitude-E6510[00m:[01;34m~/testing/test_scripts[00m$ exit
+exit
+
+Script done on Tue 26 Feb 2019 01:21:18 PM CST
