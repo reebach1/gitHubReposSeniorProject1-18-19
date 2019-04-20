@@ -1,5 +1,5 @@
 # Github repository of seniorProject1-2018-2019
-- Author 1, Author 2, and Author 3
+- Firstname Lastname, Firstname Lastname, Firstname Lastname, Dr. Suruz Miah
 
 
 
