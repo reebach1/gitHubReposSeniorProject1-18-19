@@ -3,11 +3,12 @@
 
 
 
-1. labnotebook
-2. Proposal
-3. Proposal presentation
-4. Poster 
-5. Final report
-6. Final presentation 
+01. Labnotebook
+02. System level functional requirements
+03. Proposal
+04. Proposal presentation
+05. Poster 
+06. Final report
+07. Final presentation 
 
 
