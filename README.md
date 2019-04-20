@@ -1,5 +1,5 @@
 # Github repository of seniorProject1-2018-2019
-- Firstname Lastname, Firstname Lastname, Firstname Lastname, Dr. Suruz Miah
+- Firstname Lastname, Firstname Lastname, Firstname Lastname, and Dr. Suruz Miah
 
 
 
