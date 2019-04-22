@@ -1,6 +1,6 @@
 # Github repository of seniorProject1-2018-2019
 
-# Title: ......
+# Title: BEMOSS
 
 - Firstname Lastname, Firstname Lastname, Firstname Lastname, and Dr. Suruz Miah
 
