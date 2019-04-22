@@ -1,5 +1,5 @@
 # Github repository of seniorProject1-2018-2019
-- Author 1, Author 2, Author 3, and Dr. Suruz Miah
+- F. Lastname1, F. Lastname2, F. Lastname3, and Dr. Suruz Miah
 
 ## Title: BEMOSS
 
