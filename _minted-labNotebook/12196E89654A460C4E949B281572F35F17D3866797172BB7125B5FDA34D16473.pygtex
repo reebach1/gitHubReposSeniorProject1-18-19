@@ -1,0 +1,80 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{xbee} \PYG{k+kn}{import} \PYG{n}{XBee}
+\PYG{k+kn}{import} \PYG{n+nn}{serial}
+\PYG{k+kn}{import} \PYG{n+nn}{time} 
+
+\PYG{c}{\PYGZsh{}set up serial port (on USB)}
+\PYG{c}{\PYGZsh{}ser=serial.Serial(\PYGZsq{}/dev/ttyUSB0\PYGZsq{},9600)}
+
+\PYG{c}{\PYGZsh{}attempt to set up TX RX pins to transmit}
+\PYG{n}{ser}\PYG{o}{=}\PYG{n}{serial}\PYG{o}{.}\PYG{n}{Serial}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}/dev/ttyS0\PYGZsq{}}\PYG{p}{,}\PYG{l+m+mi}{9600}\PYG{p}{)}
+
+\PYG{n}{xbee}\PYG{o}{=}\PYG{n}{XBee}\PYG{p}{(}\PYG{n}{ser}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{}request Adress of coordinator xbee \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{c}{\PYGZsh{}xbee.send(\PYGZsq{}at\PYGZsq{},frame\PYGZus{}id=\PYGZsq{}A\PYGZsq{},c}
+\PYG{n}{ommand}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}DH\PYGZsq{}}\PYG{p}{)}
+\PYG{c}{\PYGZsh{}print(xbee.wait\PYGZus{}read\PYGZus{}frame())}
+
+\PYG{c}{\PYGZsh{}request Adress low of coordinator xbee }
+\PYG{c}{\PYGZsh{}xbee.send(\PYGZsq{}at\PYGZsq{},frame\PYGZus{}id=\PYGZsq{}B\PYGZsq{},command=\PYGZsq{}DL\PYGZsq{})}
+\PYG{c}{\PYGZsh{}print( xbee.wait\PYGZus{}read\PYGZus{}frame())}
+\PYG{c}{\PYGZsh{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+
+\PYG{c}{\PYGZsh{}\PYGZsh{}xbee.remote\PYGZus{}at(}
+\PYG{c}{\PYGZsh{}\PYGZsh{}    dest\PYGZus{}addr=b\PYGZsq{}\PYGZbs{}x56\PYGZbs{}x78\PYGZsq{},}
+\PYG{c}{\PYGZsh{}\PYGZsh{}    command=\PYGZsq{}D3\PYGZsq{},}
+\PYG{c}{\PYGZsh{}\PYGZsh{}    parameter=b\PYGZsq{}\PYGZbs{}x05\PYGZsq{})}
+\PYG{c}{\PYGZsh{}\PYGZsh{}print(\PYGZdq{}stop 1\PYGZdq{})}
+\PYG{c}{\PYGZsh{}\PYGZsh{}xbee.remote\PYGZus{}at(}
+\PYG{c}{\PYGZsh{}\PYGZsh{}    dest\PYGZus{}addr=b\PYGZsq{}\PYGZbs{}x56\PYGZbs{}x78\PYGZsq{},}
+\PYG{c}{\PYGZsh{}\PYGZsh{}    command=\PYGZsq{}WR\PYGZsq{}) }
+\PYG{c}{\PYGZsh{}\PYGZsh{}print(\PYGZdq{}stop 2\PYGZdq{})}
+
+\PYG{c}{\PYGZsh{}clock wise (pin D3 high) \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{xbee}\PYG{o}{.}\PYG{n}{remote\PYGZus{}at}\PYG{p}{(}
+    \PYG{n}{dest\PYGZus{}addr}\PYG{o}{=}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xff\PYGZbs{}xff}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{command}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}D3\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{parameter}\PYG{o}{=}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}x05}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Counter Clockwise\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{xbee}\PYG{o}{.}\PYG{n}{remote\PYGZus{}at}\PYG{p}{(}
+    \PYG{n}{dest\PYGZus{}addr}\PYG{o}{=}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xff\PYGZbs{}xff}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{command}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}WR\PYGZsq{}}\PYG{p}{)} 
+
+
+\PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{c}{\PYGZsh{}stop turning (Pin D3 Low)\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{xbee}\PYG{o}{.}\PYG{n}{remote\PYGZus{}at}\PYG{p}{(}
+    \PYG{n}{dest\PYGZus{}addr}\PYG{o}{=}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xff\PYGZbs{}xff}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{command}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}D3\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{parameter}\PYG{o}{=}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}x04}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}HALT\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{xbee}\PYG{o}{.}\PYG{n}{remote\PYGZus{}at}\PYG{p}{(}
+    \PYG{n}{dest\PYGZus{}addr}\PYG{o}{=}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xff\PYGZbs{}xff}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{command}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}WR\PYGZsq{}}\PYG{p}{)} 
+
+\PYG{c}{\PYGZsh{}counter clock wise (Pin D4 High) \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{n}{xbee}\PYG{o}{.}\PYG{n}{remote\PYGZus{}at}\PYG{p}{(}
+    \PYG{n}{dest\PYGZus{}addr}\PYG{o}{=}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xff\PYGZbs{}xff}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{command}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}D4\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{parameter}\PYG{o}{=}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}x05}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}clockwise\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{xbee}\PYG{o}{.}\PYG{n}{remote\PYGZus{}at}\PYG{p}{(}
+    \PYG{n}{dest\PYGZus{}addr}\PYG{o}{=}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xff\PYGZbs{}xff}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{command}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}WR\PYGZsq{}}\PYG{p}{)}
+
+
+\PYG{n}{time}\PYG{o}{.}\PYG{n}{sleep}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}
+
+\PYG{c}{\PYGZsh{}stop turning (Pin D4 Low) \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{xbee}\PYG{o}{.}\PYG{n}{remote\PYGZus{}at}\PYG{p}{(}
+    \PYG{n}{dest\PYGZus{}addr}\PYG{o}{=}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xff\PYGZbs{}xff}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{command}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}D4\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{parameter}\PYG{o}{=}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}x04}\PYG{l+s}{\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{print}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}HALT\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{xbee}\PYG{o}{.}\PYG{n}{remote\PYGZus{}at}\PYG{p}{(}
+    \PYG{n}{dest\PYGZus{}addr}\PYG{o}{=}\PYG{n}{b}\PYG{l+s}{\PYGZsq{}}\PYG{l+s+se}{\PYGZbs{}xff\PYGZbs{}xff}\PYG{l+s}{\PYGZsq{}}\PYG{p}{,}
+    \PYG{n}{command}\PYG{o}{=}\PYG{l+s}{\PYGZsq{}WR\PYGZsq{}}\PYG{p}{)}     
+\end{Verbatim}
